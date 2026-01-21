@@ -1,38 +1,31 @@
-Tic-Tac-Toe React Project
-A modern, functional Tic-Tac-Toe game built with React. This project focuses on efficient state management using derived state and lifted state patterns.
+# 🎮 Tic-Tac-Toe React Project
 
-🚀 Features
-Dynamic Player Names: Edit and save player names during the game.
+A modern, functional game built with **React**, focusing on efficient state management and clean UI.
 
-Active Player Highlighting: Visual indicator of whose turn it is.
+### 🔗 [Click here for Live Demo](https://lelivexler.github.io/tic-tac-toe-project/)
 
-Game Log: A real-time record of every move made during the match.
+---
 
-Win & Draw Detection: Automatically calculates game outcomes based on winning combinations.
+## 🚀 Key Features
+* **Dynamic Names:** Edit and save player names in real-time.
+* **Turn Highlighting:** Visual indicator for the active player.
+* **Smart Game Log:** History of every move made.
+* **Auto-Detection:** Instant calculation of **Win** or **Draw** states.
+* **Rematch:** Quick reset to start a new game instantly.
 
-Rematch Functionality: Reset the game state without refreshing the page.
+---
 
-Optimized Performance: Uses "Derived State" to minimize the number of useState hooks and prevent unnecessary re-renders.
+## ⚙️ Architecture & Logic
+The project uses a **"Single Source of Truth"** pattern for optimized performance:
 
-🛠️ Technologies Used
-React.js (Functional Components, Hooks)
+* **Derived State:** Instead of multiple states, we use the `gameTurns` array to calculate the **Board**, the **Winner**, and the **Active Player** on the fly.
+* **Immutability:** State is updated using deep copies to prevent bugs and ensure React detects changes correctly.
 
-CSS3 (Custom styling and layout)
+---
 
-JavaScript 
-
-📂 Project Structure
-App.jsx: The main controller component. Handles the core logic and state.
-
-components/Player.jsx: Manages individual player data and the "Edit" mode.
-
-components/GameBoard.jsx: Renders the 3x3 grid and handles user interactions.
-
-components/GameOver.jsx: An overlay component triggered when the game ends.
-
-components/Log.jsx: Lists the history of moves.
-
-winning-combinations.js: A helper file containing all possible winning coordinate arrays.
-
-🔗 Live Demo
-Check out the live game here: https://lelivexler.github.io/tic-tac-toe-project/
+## 📂 Project Structure
+* **`App.jsx`** – Core logic and main state management.
+* **`Player.jsx`** – Individual player info and edit logic.
+* **`GameBoard.jsx`** – Interactive 3x3 grid rendering.
+* **`GameOver.jsx`** – Win/Draw overlay and rematch trigger.
+* **`Log.jsx`** – Move-by-move history display.
